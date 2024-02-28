@@ -64,10 +64,10 @@ volumes:
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: '/home/mthibaul/data/wordpress'
+      device: $WP_VOLUME
   mariadb:
     driver: local
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: '/home/mthibaul/data/mariadb'
+      device: $MARIADB_VOLUME
