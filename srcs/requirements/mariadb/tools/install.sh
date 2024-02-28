@@ -1,5 +1,5 @@
 
-service -u root -p$SQL_ROOT_PASSWORD mysql start;
+service mysql start;
 
 mysql -u root -p$SQL_ROOT_PASSWORD -e "CREATE DATABASE IF NOT EXISTS \`${SQL_DATABASE}\`;" # Create SQL database with env variable name SQL_DATABASE
 mysql -u root -p$SQL_ROOT_PASSWORD -e "CREATE USER IF NOT EXISTS \`${SQL_USER}\`@'localhost' IDENTIFIED BY '${SQL_PASSWORD}';" # Create user SQL_USER with password SQL_PASSWORD
