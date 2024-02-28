@@ -8,7 +8,7 @@ ARG SQL_ROOT_PASSWORD
 RUN apt update && apt upgrade -y
 RUN apt install mariadb-server -y
 
-COPY ./config/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
+COPY ./config/mariadb.conf /etc/mysql/mariadb.conf.d/mariadb.cnf
 
 RUN service mariadb start && \
     mysql -e "CREATE DATABASE IF NOT EXISTS $SQL_DATABASE; \
