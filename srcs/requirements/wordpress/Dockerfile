@@ -1,10 +1,10 @@
-FROM debian:buster
+FROM debian:bullseye
 
 RUN apt update -y && apt upgrade -y
 
 RUN apt install -y wget # Install wget to install wordpress
 
-RUN apt install -y php7.3 \
+RUN apt install -y php7.4 \
 			php-fpm \
 			php-mysql \
 			mariadb-client # Install all requirements for PHP
