@@ -1,12 +1,12 @@
 NAME				=	inception
 
+DIR_SRC				=	srcs/
+
 DOCKER_COMPOSE_PATH	=	$(DIR_SRC)docker-compose.yml
 
 DOCKER_COMPOSE		=	docker compose -f $(DOCKER_COMPOSE_PATH)
 
-DIR_SRC				=	srcs/
-
-VOL_PATH			=	/home/hferraud/data/
+VOL_PATH			=	/home/mthibaul/data/
 
 VOLUMES				=	$(WP_VOLUME) $(MARIADB_VOLUME)
 
